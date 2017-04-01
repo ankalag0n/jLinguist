@@ -8,7 +8,7 @@ jLinguist is an Java property file editor designed to help translating Java appl
 It provides simple and easy to use interface so you wont have to deal with properties files syntax. It also automatically
 escapes all of the special characters helping ensure that files are always readable by Java.
 
-![jLinguist]({{ site.github.url }}/assets/main.png)
+![jLinguist main window]({{ site.github.url }}/assets/main.png)
 
 # Download
 
@@ -25,9 +25,9 @@ languages file separately. Just pick one of the file and others will be loaded a
 all others will be loaded as well. Once files are loaded you will see all of the languages corresponding to the names of the
 files in the panel on the left. Just click the checkbox near the languages you want to edit and phrases from those languages
 will be displayed in the columns in the center. To edit the phrase double-click on it. To commit changes to the phrase press
-enter. To edit long phrases in more comfortable way right click on the selected phrase and choose ![Open]({{ site.github.url }}/assets/multiline.png) *Multiline editor*.
+enter. To edit long phrases in more comfortable way right click on the selected phrase and choose ![Multiline editor]({{ site.github.url }}/assets/multiline.png) *Multiline editor*.
 
-![jLinguist]({{ site.github.url }}/assets/editor.png)
+![jLinguist multiline editor]({{ site.github.url }}/assets/editor.png)
 
 ## Keyboard shortcuts
 
