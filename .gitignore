@@ -67,6 +67,8 @@ local.properties
 # Sensitive or high-churn files:
 .idea/**
 
+.gradle
+
 ## File-based project format:
 *.iws
 
