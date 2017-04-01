@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("gradle.plugin.edu.sc.seis:macAppBundle:2.1.6")
+        classpath('com.github.jengelman.gradle.plugins:shadow:1.2.4')
+    }
+}
+
+group 'com.github.ankalag0n'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'edu.sc.seis.macAppBundle'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+macAppBundle {
+    mainClassName = "com.github.ankalag0n.jlinguist.Main"
+    //icon = "osxIcon.icns"
+    bundleJRE = false
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.github.ankalag0n.jlinguist.Main'
+    }
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.inject', name: 'guice', version: '4.1.0'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+}

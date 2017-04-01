@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ankalag0n.jlinguist.controller.AddTranslationWindowControllerImpl">
+    <bottom>
+        <HBox spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button defaultButton="true" mnemonicParsing="false" text="%save" onAction="#addLanguage" />
+                <Button cancelButton="true" mnemonicParsing="false" text="%cancel" onAction="#closeWindow" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <GridPane hgap="10.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="0.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Label maxHeight="1.7976931348623157E308" text="%addTranslationWindow.languageLabel" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                <ChoiceBox fx:id="languageChoiceBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>

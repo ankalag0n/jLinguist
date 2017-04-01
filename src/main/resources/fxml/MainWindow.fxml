@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Tooltip?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.github.ankalag0n.jlinguist.controller.MainWindowControllerImpl">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button mnemonicParsing="false" onAction="#openFileAction">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/open.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.openFile"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#saveCurrentTab">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/save.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.saveCurrentFile"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#saveAllTabs">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/saveAll.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.saveAllFiles"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#addNewLanguage">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/addLang.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.addLanguage"/>
+                    </tooltip>
+                </Button>
+                <ToggleButton mnemonicParsing="false" onAction="#togglePhraseKeyColumnVisibility" fx:id="togglePhraseKeyButton">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/toggleKeyCol.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.showHideKeyColumn"/>
+                    </tooltip>
+                </ToggleButton>
+                <Button mnemonicParsing="false" onAction="#showAboutWindow">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/images/icons/about.png"/>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="%toolbar.tooltip.about"/>
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" BorderPane.alignment="CENTER">
+            <tabs>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

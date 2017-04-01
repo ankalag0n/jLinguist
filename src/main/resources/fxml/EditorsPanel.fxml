@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<SplitPane fx:id="mainPane" dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ankalag0n.jlinguist.controller.EditorsPanelControllerImpl">
+    <items>
+        <BorderPane maxWidth="250.0" prefWidth="250.0">
+            <center>
+                <ListView fx:id="languageSelect">
+
+                </ListView>
+            </center>
+         <bottom>
+            <ChoiceBox maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" fx:id="charsetSelect">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </ChoiceBox>
+         </bottom>
+        </BorderPane>
+        <TableView fx:id="phraseTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" editable="true">
+            <placeholder>
+                <Label text="%editorsPanel.tableViewPlaceholder" />
+            </placeholder>
+            <columns>
+                <TableColumn prefWidth="240" id="/KEY_COLUMN/" fx:id="phraseKeyColumn" visible="false">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="key"/>
+                    </cellValueFactory>
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="3.0">
+                            <padding>
+                                <Insets bottom="2.0" top="2.0"/>
+                            </padding>
+                            <Label text="%editorsPanel.keyColumnText"/>
+                            <TextField minWidth="10.0" fx:id="phraseKeySearchField" onAction="#doFilter"/>
+                        </VBox>
+                    </graphic>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </items>
+</SplitPane>

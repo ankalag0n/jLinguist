@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="353.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ankalag0n.jlinguist.controller.AboutWindowControllerImpl">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      <Label text="jLinguist" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label text="v 1.0" />
+      <Label text="Grzegorz Bednarz" />
+      <Label text="grzesiek.bednarz [at] gmail.com" />
+      <Label text="%about.3rdPartyLib" underline="true">
+         <VBox.margin>
+            <Insets bottom="-5.0" top="50.0" />
+         </VBox.margin>
+      </Label>
+      <Hyperlink text="Google Guice" onAction="#openGuiceWebPage">
+         <VBox.margin>
+            <Insets bottom="-10.0" />
+         </VBox.margin>
+      </Hyperlink>
+      <Hyperlink text="Apache Commons Configuration" onAction="#openCommonsWebPage" />
+      <Label text="%about.iconsBy" underline="true">
+         <VBox.margin>
+            <Insets bottom="-5.0" />
+         </VBox.margin>
+      </Label>
+      <Hyperlink text="FatCow Farm-Fresh Web Icons" onAction="#openFatCowWebPage" />
+   </children>
+</VBox>

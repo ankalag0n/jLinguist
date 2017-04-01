@@ -1,0 +1,15 @@
+title: jLinguist
+description: >
+  jLinguist is a simple app designed to help translating Java applications into different languages. jLinguist is an open source distributed under GPL v3 licence.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+repository: ankalag0n/jLinguist
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
